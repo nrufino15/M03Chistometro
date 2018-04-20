@@ -1,8 +1,15 @@
 package com.company;
 
-public class Main {
+import com.company.Manager.ManagerUsuarios;
+import com.company.View.PantallaMenuAcceso;
+
+public class  Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        ManagerUsuarios managerUsuarios = new ManagerUsuarios();
+
+        PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
+        pantallaMenuAcceso.iniciar(managerUsuarios);
     }
 }
