@@ -22,8 +22,6 @@ public class PantallaChistes {
 
         managerChiste.crearChiste(title, body);
 
-        Chiste chiste56 = managerChiste.consultar();
-
         System.out.println("Chiste creado");
     }
 }

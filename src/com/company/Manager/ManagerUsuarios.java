@@ -1,5 +1,6 @@
 package com.company.Manager;
 
+import com.company.Model.Chiste;
 import com.company.Model.Usuario;
 
 
@@ -29,5 +30,13 @@ public class ManagerUsuarios {
         }
 
         return false;
+    }
+
+    public void consultar(){
+        for (int i = 0; i < usuarios.length; i++) {
+            if (usuarios[i] != null){
+                System.out.println(usuarios[i]);
+            }
+        }
     }
 }

@@ -16,8 +16,4 @@ public class ManagerChiste {
         }
     }
 
-    public void consultar(){
-        return chistes[0];
-    }
-
 }

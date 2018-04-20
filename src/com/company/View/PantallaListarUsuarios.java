@@ -1,12 +1,12 @@
 package com.company.View;
 
-import com.company.Manager.ManagerChiste;
+import com.company.Manager.ManagerUsuarios;
 
 public class PantallaListarUsuarios {
-    public void mostrar(ManagerChiste managerChiste) {
+    public void mostrar(ManagerUsuarios managerUsuarios) {
         System.out.println("Lista de Usuarios");
 
-        managerChiste.consultar();
+        managerUsuarios.consultar();
 
     }
 }
