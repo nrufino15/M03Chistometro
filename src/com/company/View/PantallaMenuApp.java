@@ -13,26 +13,23 @@ public class PantallaMenuApp {
 
         System.out.println("Chistometro");
         System.out.print("a) Añadir Chiste ");
-        String a = scanner.nextLine();
         System.out.print("b) Valorar chiste ");
-        String b = scanner.nextLine();
         System.out.print("c) Ranking ");
-        String c = scanner.nextLine();
         System.out.print("d) Premios ");
-        String d = scanner.nextLine();
+        String option = scanner.nextLine();
 
 
 
-        if("a".equals(a)){
+        if("a".equals(option)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
             pantallaAcceder.iniciar(managerUsuarios);
-        } else if("b".equals(b)){
+        } else if("b".equals(option)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
             pantallaAcceder.iniciar(managerUsuarios);
-        } else if("c".equals(c)){
+        } else if("c".equals(option)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
             pantallaAcceder.iniciar(managerUsuarios);
-        }else if("d".equals(d)){
+        }else if("d".equals(option)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
             pantallaAcceder.iniciar(managerUsuarios);
         }
