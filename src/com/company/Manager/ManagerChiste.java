@@ -6,10 +6,6 @@ public class ManagerChiste {
 
     Chiste[] chistes = new Chiste[100];
 
-    public void mostrarUsuario(){
-
-    }
-
     public void crearChiste(String nombre, String apellido){
         for (int i = 0; i < chistes.length; i++) {
             if (chistes[i] == null){

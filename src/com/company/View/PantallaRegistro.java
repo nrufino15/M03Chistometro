@@ -11,14 +11,14 @@ public class PantallaRegistro {
         System.out.print("Nombre: ");
         String firstName = scanner.nextLine();
         System.out.print("Apellido: ");
-        String  lastName = scanner.nextLine();
+        String lastName = scanner.nextLine();
 
         System.out.print("Usuario: ");
         String username = scanner.nextLine();
         System.out.print("Contraseña: ");
         String password = scanner.nextLine();
 
-        managerUsuarios.crearUsuario(username, password);
+        managerUsuarios.crearUsuario(firstName, lastName, username, password);
 
         PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
         pantallaMenuAcceso.iniciar(managerUsuarios);
