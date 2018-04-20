@@ -18,7 +18,7 @@ public class PantallaChiste {
         System.out.println("Introduce el cuerpo del chiste: ");
         String cuerpo = scanner.nextLine();
 
-        managerChiste.crearUsuario(nombre, apellido);
+        managerChiste.mostrarUsuario(nombre, apellido);
         managerChiste.crearChiste(titulo, cuerpo);
 
         managerChiste.consultar();

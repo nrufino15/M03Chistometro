@@ -14,11 +14,15 @@ public class PantallaChistes {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("ALUMNOS");
+        System.out.println("Pantalla creacion de chistes");
         System.out.println("Introduzca el nombre");
         String nombre = scanner.nextLine();
         System.out.println("Introduzca el apellido");
         String apellido = scanner.nextLine();
+        System.out.println("Introduce el titulo del chiste: ");
+        String titulo = scanner.nextLine();
+        System.out.println("Introduce el cuerpo del chiste: ");
+        String cuerpo = scanner.nextLine();
 
 
         managerChiste.crear(nombre, apellido);

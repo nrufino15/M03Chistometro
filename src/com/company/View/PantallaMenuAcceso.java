@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class PantallaMenuAcceso {
 
     public void iniciar(ManagerUsuarios managerUsuarios){
-        System.out.println("MyApp :: Menu");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Chistometro :: Menu");
         System.out.println("a) Registrarse");
         System.out.println("b) Acceder");
-        Scanner scanner = new Scanner(System.in);
         String opcion = scanner.nextLine();
 
 

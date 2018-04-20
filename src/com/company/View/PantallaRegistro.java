@@ -9,16 +9,16 @@ public class PantallaRegistro {
         Scanner scanner = new Scanner(System.in);
         System.out.println("MyApp :: Registro");
         System.out.print("Nombre: ");
-        String nombre = scanner.nextLine();
+        String firstName = scanner.nextLine();
         System.out.print("Apellido: ");
-        String apellido = scanner.nextLine();
+        String  lastName = scanner.nextLine();
 
         System.out.print("Usuario: ");
-        String usuario = scanner.nextLine();
+        String username = scanner.nextLine();
         System.out.print("Contraseña: ");
-        String contraseña = scanner.nextLine();
+        String password = scanner.nextLine();
 
-        managerUsuarios.crearUsuario(usuario, contraseña);
+        managerUsuarios.crearUsuario(username, password);
 
         PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
         pantallaMenuAcceso.iniciar(managerUsuarios);
