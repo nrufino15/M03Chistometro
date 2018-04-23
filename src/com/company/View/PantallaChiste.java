@@ -14,6 +14,6 @@ public class PantallaChiste {
         System.out.println("Introduce el chiste");
         String nuevoChiste = scanner.nextLine();
 
-        managerChiste
+        managerChiste.crearChiste(nuevoChiste);
     }
 }

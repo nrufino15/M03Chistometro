@@ -1,19 +1,19 @@
 package com.company.Manager;
 
-import com.company.Model.Chiste;
+import com.company.Model.Chistes;
 
 public class ManagerChiste {
 
-    Chiste[] chistes = new Chiste[100];
+    Chistes[] chistes = new Chiste[100];
 
-    public void crearChiste(String nombre, String apellido){
+    public void crearChiste(String chiste){
+        Chistes chistes = new Chistes();
+        chiste.chiste = nuevoChiste;
+
         for (int i = 0; i < chistes.length; i++) {
             if (chistes[i] == null){
-                chistes[i] = new Chiste();
-
+                chistes[i] = new Chistes();
             }
-
         }
     }
-
 }
