@@ -9,6 +9,7 @@ public class PantallaValorarChiste {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Valorar Chiste");
+
         System.out.println("Valoracion:");
 
         System.out.println("Otro Chiste?");
