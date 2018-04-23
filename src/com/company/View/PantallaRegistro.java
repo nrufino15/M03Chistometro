@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class PantallaRegistro {
     public void iniciar(ManagerUsuarios managerUsuarios){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("MyApp :: Registro");
+        System.out.println("Chistometro :: Registro");
         System.out.print("Nombre: ");
         String firstName = scanner.nextLine();
         System.out.print("Apellido: ");

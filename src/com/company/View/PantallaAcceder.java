@@ -8,18 +8,18 @@ public class PantallaAcceder {
     public void iniciar(ManagerUsuarios managerUsuarios){
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Chistometro :: Acceder");
         System.out.print("Usuario: ");
-        String usuario = scanner.nextLine();
+        String username = scanner.nextLine();
         System.out.print("Contraseña: ");
-        String contraseña = scanner.nextLine();
+        String password = scanner.nextLine();
 
-        boolean esta = managerUsuarios.verificar(usuario, contraseña);
-        if(esta){
+        boolean verificar = managerUsuarios.verificar(username, password);
+
+        if (verificar) {
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
             pantallaMenuApp.mostrar(managerUsuarios);
-
-
-        }else{
+        } else {
             PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
             pantallaMenuAcceso.iniciar(managerUsuarios);
         }

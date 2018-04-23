@@ -1,9 +1,6 @@
 package com.company.View;
 
-import com.company.Manager.ManagerChiste;
 import com.company.Manager.ManagerUsuarios;
-import com.company.Model.Chiste;
-
 import java.util.Scanner;
 
 public class PantallaMenuApp {
@@ -12,10 +9,10 @@ public class PantallaMenuApp {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Chistometro");
-        System.out.print("a) Añadir Chiste ");
-        System.out.print("b) Valorar chiste ");
-        System.out.print("c) Ranking ");
-        System.out.print("d) Premios ");
+        System.out.println("a) Añadir Chiste ");
+        System.out.println("b) Valorar chiste ");
+        System.out.println("c) Ranking ");
+        System.out.println("d) Premios ");
         String option = scanner.nextLine();
 
 

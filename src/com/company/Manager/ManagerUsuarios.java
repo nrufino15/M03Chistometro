@@ -1,11 +1,9 @@
 package com.company.Manager;
 
-import com.company.Model.Chiste;
 import com.company.Model.Usuario;
 
-
 public class ManagerUsuarios {
-    Usuario[] usuarios = new Usuario[100];
+    Usuario[] usuarios = new Usuario[10];
 
     public void crearUsuario(String firstName, String lastName, String username, String password) {
         Usuario usuario = new Usuario();
@@ -28,7 +26,6 @@ public class ManagerUsuarios {
                 return true;
             }
         }
-
         return false;
     }
 
