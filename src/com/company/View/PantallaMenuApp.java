@@ -19,14 +19,16 @@ public class PantallaMenuApp {
 
         if("a".equals(option)){
             PantallaChiste pantallaChiste = new PantallaChiste();
-            pantallaChiste.iniciar(ManagerChiste);
+            pantallaChiste.iniciar();
         } else if ("b".equals(option)){
             PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
-            pantallaValorarChiste(ManagerChiste)
+            pantallaValorarChiste.mostrar();
         } else if ("c".equals(option)){
-
+            PantallaRanking pantallaRanking = new PantallaRanking();
+            pantallaRanking.iniciar()
         }else if ("d".equals(option)){
-
+            PantallaPremios pantallaPremios = new PantallaPremios();
+            pantallaPremios.iniciar();
         }
 
     }
