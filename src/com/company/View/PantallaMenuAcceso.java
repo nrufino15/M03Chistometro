@@ -9,6 +9,7 @@ public class PantallaMenuAcceso {
     public void iniciar(ManagerUsuarios managerUsuarios){
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("-------------------------");
         System.out.println("Chistometro :: Menu");
         System.out.println("a) Registrarse");
         System.out.println("b) Acceder");

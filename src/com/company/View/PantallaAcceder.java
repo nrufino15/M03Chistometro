@@ -8,6 +8,7 @@ public class PantallaAcceder {
     public void iniciar(ManagerUsuarios managerUsuarios){
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("-------------------------");
         System.out.println("Chistometro :: Acceder");
         System.out.print("Usuario: ");
         String username = scanner.nextLine();
