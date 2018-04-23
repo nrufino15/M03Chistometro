@@ -1,5 +1,6 @@
 package com.company.View;
 
+import com.company.Manager.ManagerChiste;
 import com.company.Manager.ManagerUsuarios;
 import java.util.Scanner;
 
@@ -7,10 +8,6 @@ public class PantallaMenuApp {
 
     public void mostrar(ManagerUsuarios managerUsuarios) {
         Scanner scanner = new Scanner(System.in);
-
-
-
-
 
         System.out.println("-------------------------");
         System.out.println("Chistometro");
@@ -20,22 +17,15 @@ public class PantallaMenuApp {
         System.out.println("d) Premios ");
         String option = scanner.nextLine();
 
-
-
-
-
         if("a".equals(option)){
-            PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios);
+            PantallaChiste pantallaChiste = new PantallaChiste();
+            pantallaChiste.iniciar(ManagerChiste);
         } else if("b".equals(option)){
-            PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios);
+
         } else if("c".equals(option)){
-            PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios);
+
         }else if("d".equals(option)){
-            PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios);
+
         }
 
     }

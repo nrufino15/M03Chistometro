@@ -22,7 +22,7 @@ public class ManagerUsuarios {
 
     public boolean verificar(String username, String password){
         for (int i = 0; i < usuarios.length; i++) {
-            if(usuarios[i].nickname.equals(username) && usuarios[i].password.equals(password)){
+            if(usuarios[i] != null && usuarios[i].nickname.equals(username) && usuarios[i].password.equals(password)){
                 return true;
             }
         }
