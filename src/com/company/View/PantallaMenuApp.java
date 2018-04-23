@@ -20,11 +20,12 @@ public class PantallaMenuApp {
         if("a".equals(option)){
             PantallaChiste pantallaChiste = new PantallaChiste();
             pantallaChiste.iniciar(ManagerChiste);
-        } else if("b".equals(option)){
+        } else if ("b".equals(option)){
+            PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
+            pantallaValorarChiste(ManagerChiste)
+        } else if ("c".equals(option)){
 
-        } else if("c".equals(option)){
-
-        }else if("d".equals(option)){
+        }else if ("d".equals(option)){
 
         }
 
