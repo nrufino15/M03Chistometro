@@ -8,6 +8,10 @@ public class PantallaMenuApp {
     public void mostrar(ManagerUsuarios managerUsuarios) {
         Scanner scanner = new Scanner(System.in);
 
+
+
+
+
         System.out.println("-------------------------");
         System.out.println("Chistometro");
         System.out.println("a) Añadir Chiste ");
@@ -15,6 +19,8 @@ public class PantallaMenuApp {
         System.out.println("c) Ranking ");
         System.out.println("d) Premios ");
         String option = scanner.nextLine();
+
+
 
 
 
