@@ -20,9 +20,9 @@ public class ManagerChiste {
 
     }
 
-    public boolean verificarChiste(String title, String nuevoChiste){
+    public boolean verificarChiste(String nuevoChiste){
         for (int i = 0; i < chistes.length; i++) {
-            if(chistes[i] != null && chistes[i].titulo.equals(title) && chistes[i].cuerpo.equals(nuevoChiste)){
+            if(chistes[i] != null && chistes[i].cuerpo.equals(nuevoChiste)){
                 return false;
             }
         }

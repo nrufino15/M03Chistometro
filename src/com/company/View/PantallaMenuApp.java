@@ -19,7 +19,7 @@ public class PantallaMenuApp {
 
         if("a".equals(option)){
             PantallaChiste pantallaChiste = new PantallaChiste();
-            pantallaChiste.iniciar(ManagerChiste);
+            pantallaChiste.iniciar(managerUsuarios);
         } else if ("b".equals(option)){
             PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
             pantallaValorarChiste.mostrar();
