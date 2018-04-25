@@ -15,5 +15,13 @@ public class PantallaChiste {
         String nuevoChiste = scanner.nextLine();
 
         managerChiste.crearChiste(nuevoChiste);
+
+        boolean verificar = managerChiste.verificarChiste(nuevoChiste);
+
+        if (verificar) {
+
+        } else {
+
+        }
     }
 }
