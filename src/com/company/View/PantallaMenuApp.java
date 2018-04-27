@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class PantallaMenuApp {
 
-    public void mostrar(ManagerUsuarios managerUsuarios) {
+    public void mostrar(ManagerUsuarios managerUsuarios, ManagerChiste managerChiste) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
@@ -19,7 +19,7 @@ public class PantallaMenuApp {
 
         if("a".equals(option)){
             PantallaChiste pantallaChiste = new PantallaChiste();
-            pantallaChiste.iniciar(managerUsuarios);
+            pantallaChiste.iniciar(managerChiste);
         } else if ("b".equals(option)){
             PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
             pantallaValorarChiste.mostrar();

@@ -1,11 +1,12 @@
 package com.company.View;
 
+import com.company.Manager.ManagerChiste;
 import com.company.Manager.ManagerUsuarios;
 
 import java.util.Scanner;
 
 public class PantallaAcceder {
-    public void iniciar(ManagerUsuarios managerUsuarios){
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerChiste managerChiste){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
@@ -19,10 +20,10 @@ public class PantallaAcceder {
 
         if (verificar) {
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-            pantallaMenuApp.mostrar(managerUsuarios);
+            pantallaMenuApp.mostrar(managerUsuarios, managerChiste);
         } else {
             PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-            pantallaMenuAcceso.iniciar(managerUsuarios);
+            pantallaMenuAcceso.iniciar(managerUsuarios, managerChiste);
         }
     }
 }

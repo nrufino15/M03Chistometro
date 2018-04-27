@@ -1,12 +1,13 @@
 package com.company.View;
 
+import com.company.Manager.ManagerChiste;
 import com.company.Manager.ManagerUsuarios;
 
 import java.util.Scanner;
 
 public class PantallaMenuAcceso {
 
-    public void iniciar(ManagerUsuarios managerUsuarios){
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerChiste managerChiste){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
@@ -21,7 +22,7 @@ public class PantallaMenuAcceso {
             pantallaRegistro.iniciar(managerUsuarios);
         } else if("b".equals(opcion)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios);
+            pantallaAcceder.iniciar(managerUsuarios, managerChiste);
         }
     }
 }
