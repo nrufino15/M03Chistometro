@@ -1,6 +1,6 @@
 package com.company.View;
 
-public class PantallaRanking {
+public class PantallaPremios {
     public void iniciar(){
 
     }
