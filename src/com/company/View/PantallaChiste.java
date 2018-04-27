@@ -11,12 +11,14 @@ public class PantallaChiste {
         System.out.println("Chistometro :: Añadir Chiste");
         System.out.print("Confirmar contraseña:");
         String password = scanner.nextLine();
+        System.out.println("Introduce el titulo");
+        String title = scanner.nextLine();
         System.out.println("Introduce el chiste");
-        String nuevoChiste = scanner.nextLine();
+        scanner nuevoChiste = scanner.nextLine();
 
-        managerChiste.crearChiste(nuevoChiste);
+        managerChiste.crearChiste(title, nuevoChiste);
 
-        boolean verificar = managerChiste.verificarChiste(nuevoChiste);
+        boolean verificar = managerChiste.verificarChiste(title, nuevoChiste);
 
         if (verificar) {
 

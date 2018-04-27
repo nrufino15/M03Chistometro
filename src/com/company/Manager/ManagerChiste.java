@@ -1,31 +1,31 @@
 package com.company.Manager;
 
-import com.company.Model.Chistes;
+import com.company.Model.Chiste;
 
 
 public class ManagerChiste {
-    Chistes[] chistes = new Chistes[10];
+    Chiste[] chistes = new Chiste[10];
 
-    public void crearChiste(String chiste){
-        Usuario usuario = new Usuario();
-        usuario.firstName = firstName;
-        usuario.lastName = lastName;
-        usuario.nickname = username;
-        usuario.password = password;
+    public void crearChiste(String title, String nuevoChiste){
+        Chiste chiste = new Chiste();
+        chiste.titulo = title;
+        chiste.cuerpo = nuevoChiste;
 
-        for (int i = 0; i < usuarios.length; i++) {
-            if (usuarios[i] == null) {
-                usuarios[i] = usuario;
+        for (int i = 0; i < chistes.length; i++) {
+            if (chistes[i] == null) {
+                 chistes[i] = chiste;
                 break;
             }
         }
 
     }
 
-    public boolean verificarChiste(String nuevoChiste) {
-        for (int i = 0; i <chistes.length; i++) {
-            if (chistes[i] != null && chistes[i].chiste)
-
+    public boolean verificarChiste(String nuevoChiste){
+        for (int i = 0; i < chistes.length; i++) {
+            if(chistes[i] != null && chistes[i].cuerpo.equals(nuevoChiste)){
+                return false;
+            }
         }
+        return true;
     }
 }
