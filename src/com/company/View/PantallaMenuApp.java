@@ -22,7 +22,7 @@ public class PantallaMenuApp {
             pantallaChiste.iniciar(managerChiste);
         } else if ("b".equals(option)){
             PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
-            pantallaValorarChiste.mostrar();
+            pantallaValorarChiste.mostrar(managerUsuarios);
         } else if ("c".equals(option)){
             PantallaRanking pantallaRanking = new PantallaRanking();
             pantallaRanking.iniciar();
