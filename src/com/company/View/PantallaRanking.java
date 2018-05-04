@@ -5,8 +5,7 @@ public class PantallaRanking {
 
 
 
-        System.out.println("1"   //Valoracion    Chiste
-                );
+        System.out.println("1"    ManagerValoracion);
         System.out.println("2"   //Valoracion    Chiste
         );
         System.out.println("3"   //Valoracion    Chiste
