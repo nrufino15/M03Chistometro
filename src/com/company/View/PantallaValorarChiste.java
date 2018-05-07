@@ -4,6 +4,7 @@ import com.company.Manager.ManagerChiste;
 import com.company.Manager.ManagerUsuarios;
 import com.company.Manager.ManagerValoracion;
 
+
 import java.util.Scanner;
 
 public class PantallaValorarChiste {
@@ -28,10 +29,11 @@ public class PantallaValorarChiste {
 
         }else if ("No"!=(si)){
         PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-        pantallaMenuApp.mostrar(managerUsuarios);
+        pantallaMenuApp.mostrar(managerValoracion);
         }
 
 
     }
 
 }
+  
