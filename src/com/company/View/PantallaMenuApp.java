@@ -2,11 +2,13 @@ package com.company.View;
 
 import com.company.Manager.ManagerChiste;
 import com.company.Manager.ManagerUsuarios;
+import com.company.Manager.ManagerValoracion;
+
 import java.util.Scanner;
 
 public class PantallaMenuApp {
 
-    public void mostrar(ManagerUsuarios managerUsuarios, ManagerChiste managerChiste) {
+    public void mostrar(ManagerUsuarios managerUsuarios, ManagerChiste managerChiste, ManagerValoracion managerValoracion) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
