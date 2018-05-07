@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class PantallaMenuApp {
 
-    public void mostrar(ManagerUsuarios managerUsuarios, ManagerChiste managerChiste, ManagerValoracion managerValoracion) {
+    public void mostrar(ManagerUsuarios managerUsuarios) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
@@ -18,20 +18,6 @@ public class PantallaMenuApp {
         System.out.println("c) Ranking ");
         System.out.println("d) Premios ");
         String option = scanner.nextLine();
-
-        if("a".equals(option)){
-            PantallaChiste pantallaChiste = new PantallaChiste();
-            pantallaChiste.iniciar(managerChiste);
-        } else if ("b".equals(option)){
-            PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
-            pantallaValorarChiste.mostrar(managerUsuarios);
-        } else if ("c".equals(option)){
-            PantallaRanking pantallaRanking = new PantallaRanking();
-            pantallaRanking.iniciar();
-        }else if ("d".equals(option)){
-            PantallaPremios pantallaPremios = new PantallaPremios();
-            pantallaPremios.iniciar();
-        }
 
     }
 }

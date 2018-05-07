@@ -21,8 +21,5 @@ public class PantallaRegistro {
         String password = scanner.nextLine();
 
         managerUsuarios.crearUsuario(firstName, lastName, username, password);
-
-        PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-        pantallaMenuAcceso.iniciar(managerUsuarios);
     }
 }

@@ -20,10 +20,7 @@ public class PantallaAcceder {
 
         if (verificar) {
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-            pantallaMenuApp.mostrar(managerUsuarios, managerChiste);
-        } else {
-            PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-            pantallaMenuAcceso.iniciar(managerUsuarios, managerChiste);
+            pantallaMenuApp.mostrar(managerUsuarios);
         }
     }
 }
