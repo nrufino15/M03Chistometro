@@ -29,6 +29,15 @@ public class ManagerUsuarios {
         return false;
     }
 
+    public boolean verificarPassword(String password){
+        for (int i = 0; i < usuarios.length; i++) {
+            if(usuarios[i] != null && usuarios[i].password.equals(password)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void consultar(){
         for (int i = 0; i < usuarios.length; i++) {
             if (usuarios[i] != null){
