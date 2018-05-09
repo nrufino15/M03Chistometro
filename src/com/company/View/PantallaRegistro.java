@@ -6,21 +6,20 @@ import java.util.Scanner;
 
 public class PantallaRegistro {
     public void iniciar(ManagerUsuarios managerUsuarios){
+        System.out.println("---------------------------");
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("-------------------------");
-        System.out.println("Chistometro :: Registro");
+        System.out.println("MyApp :: Registro");
         System.out.print("Nombre: ");
-        String firstName = scanner.nextLine();
+        String nombre = scanner.nextLine();
         System.out.print("Apellido: ");
-        String lastName = scanner.nextLine();
+        String apellido = scanner.nextLine();
 
         System.out.print("Usuario: ");
-        String username = scanner.nextLine();
+        String usuario = scanner.nextLine();
         System.out.print("Contraseña: ");
-        String password = scanner.nextLine();
+        String contraseña = scanner.nextLine();
 
-        managerUsuarios.crearUsuario(firstName, lastName, username, password);
+        managerUsuarios.crearUsuario(usuario, contraseña);
 
         PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
         pantallaMenuAcceso.iniciar(managerUsuarios);
