@@ -1,11 +1,12 @@
 package com.company.View;
 
 import com.company.Manager.ManagerUsuarios;
+import com.company.Manager.ManagerValoracion;
 
 import java.util.Scanner;
 
 public class PantallaRegistro {
-    public void iniciar(ManagerUsuarios managerUsuarios){
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoracion managerValoracion){
         System.out.println("---------------------------");
         Scanner scanner = new Scanner(System.in);
         System.out.println("MyApp :: Registro");
@@ -22,6 +23,6 @@ public class PantallaRegistro {
         managerUsuarios.crearUsuario(usuario, contraseña);
 
         PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-        pantallaMenuAcceso.iniciar(managerUsuarios);
+        pantallaMenuAcceso.iniciar(managerUsuarios, managerValoracion);
     }
 }
