@@ -8,21 +8,31 @@ import java.util.Scanner;
 
 public class PantallaMenuAcceso {
 
-    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes){
-        System.out.println("---------------------------");
-        System.out.println("MyApp :: Menu");
-        System.out.println("a) Registrarse");
-        System.out.println("b) Acceder");
-        Scanner scanner = new Scanner(System.in);
-        String opcion = scanner.nextLine();
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes) throws InterruptedException {
+
+        boolean esValido = false;
+
+        while(!esValido) {
+            System.out.println("---------------------------");
+            System.out.println("MyApp :: Menu");
+            System.out.println("1) Registrarse");
+            System.out.println("2) Acceder");
+            Scanner scanner = new Scanner(System.in);
+            String opcion = scanner.nextLine();
 
 
-        if("a".equals(opcion) || "A".equals(opcion)){
-            PantallaRegistro pantallaRegistro = new PantallaRegistro();
-            pantallaRegistro.iniciar(managerUsuarios, managerValoraciones, managerChistes);
-        } else if("b".equals(opcion) || "B".equals(opcion)){
-            PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+            if("1".equals(opcion)){
+                PantallaRegistro pantallaRegistro = new PantallaRegistro();
+                pantallaRegistro.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+                esValido = true;
+            } else if("2".equals(opcion)){
+                PantallaAcceder pantallaAcceder = new PantallaAcceder();
+                pantallaAcceder.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+                esValido = true;
+            } else {
+                System.out.println("Debes elegir la opcion correcta, solo números");
+                esValido = false;
+            }
         }
     }
 }

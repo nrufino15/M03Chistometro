@@ -6,8 +6,10 @@ import com.company.Model.Usuario;
 public class ManagerUsuarios {
     public Usuario[] usuarios = new Usuario[100];
 
-    public void crearUsuario(String username, String password) {
+    public void crearUsuario(String firstname, String lastname, String username, String password) {
         Usuario usuario = new Usuario();
+        usuario.firstName = firstname;
+        usuario.lastName = lastname;
         usuario.nickname = username;
         usuario.password = password;
 

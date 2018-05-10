@@ -4,12 +4,12 @@ import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
 import com.company.Manager.ManagerValoraciones;
 
+import java.awt.desktop.ScreenSleepEvent;
 import java.util.Scanner;
 
 public class PantallaAcceder {
-    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes){
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-
 
         System.out.print("Usuario: ");
         String username = scanner.nextLine();
@@ -21,6 +21,9 @@ public class PantallaAcceder {
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
             pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
         }else{
+            System.out.println();
+            System.out.println("Usuario no encontrado, Registrese antes");
+            Thread.sleep(2000);
             PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
             pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
         }

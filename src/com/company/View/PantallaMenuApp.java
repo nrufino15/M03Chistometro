@@ -8,43 +8,50 @@ import java.util.Scanner;
 
 public class PantallaMenuApp {
 
-    public void mostrar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes) {
+    public void mostrar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
         System.out.println("Chistometro");
-        System.out.println("a) Añadir Chiste ");
-        System.out.println("b) Valorar chiste ");
-        System.out.println("c) Ranking ");
-        System.out.println("d) Premios ");
+        System.out.println();
+        System.out.println("1) Añadir Chiste ");
+        System.out.println("2) Ver y valorar chiste ");
+        System.out.println("3) Ranking ");
+        System.out.println("4) Premios ");
+        System.out.println("5) Log out");
+        System.out.println("6) Salir");
         String option = scanner.nextLine();
 
-        String opcion = scanner.nextLine();
-        if ("a".equals(opcion) || "A".equals(opcion) ) {
+
+        if ("1".equals(option)) {
             PantallaChiste pantallaChiste = new PantallaChiste();
             pantallaChiste.iniciar(managerUsuarios, managerChistes, managerValoraciones);
-
-        } else if ("b".equals(opcion)|| "B".equals(opcion)) {
+        } else if ("2".equals(option)) {
             PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
             pantallaValorarChiste.mostrar(managerChistes, managerUsuarios, managerValoraciones);
 
-        } else if ("c".equals(opcion)|| "C".equals(opcion)) {
+        } else if ("3".equals(option)) {
             PantallaRanking pantallaRanking = new PantallaRanking();
             pantallaRanking.iniciar(managerValoraciones, managerUsuarios, managerChistes);
 
-        } else if ("d".equals(opcion)|| "D".equals(opcion)) {
+        } else if ("4".equals(option)) {
             PantallaPremios pantallaPremios = new PantallaPremios();
             pantallaPremios.iniciar(managerChistes, managerValoraciones, managerUsuarios);
 
-        }else{
+        } else if ("5".equals(option)) {
+            PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
+            pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+
+        } else if ("6".equals(option)) {
+            System.out.println("-------------------------");
+            System.out.println("Hasta luego Lucas");
+            return;
+        } else{
             System.out.println("Error opcion no valida");
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
             pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
 
         }
 
-    }
-
-    public void mostrar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes) {
     }
 }

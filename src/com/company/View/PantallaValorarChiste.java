@@ -8,7 +8,7 @@ import com.company.Manager.ManagerValoraciones;
 import java.util.Scanner;
 
 public class PantallaValorarChiste {
-    public void mostrar (ManagerChistes managerChistes, ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones){
+    public void mostrar (ManagerChistes managerChistes, ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Valorar Chiste");
