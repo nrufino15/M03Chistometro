@@ -1,9 +1,11 @@
 package com.company.View;
 
-import com.company.Manager.ManagerValoracion;
+import com.company.Manager.ManagerChistes;
+import com.company.Manager.ManagerUsuarios;
+import com.company.Manager.ManagerValoraciones;
 
 public class PantallaRanking {
-    public void iniciar(ManagerValoracion managerValoracion){
+    public void iniciar(ManagerValoraciones managerValoraciones, ManagerUsuarios managerUsuarios, ManagerChistes managerChistes){
 
 
 

@@ -1,13 +1,14 @@
 package com.company.View;
 
+import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
-import com.company.Manager.ManagerValoracion;
+import com.company.Manager.ManagerValoraciones;
 
 import java.util.Scanner;
 
 public class PantallaMenuAcceso {
 
-    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoracion managerValoracion){
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes){
         System.out.println("---------------------------");
         System.out.println("MyApp :: Menu");
         System.out.println("a) Registrarse");
@@ -18,10 +19,13 @@ public class PantallaMenuAcceso {
 
         if("a".equals(opcion) || "A".equals(opcion)){
             PantallaRegistro pantallaRegistro = new PantallaRegistro();
-            pantallaRegistro.iniciar(managerUsuarios, managerValoracion);
+            pantallaRegistro.iniciar(managerUsuarios, managerValoraciones);
         } else if("b".equals(opcion) || "B".equals(opcion)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios, managerValoracion);
+            pantallaAcceder.iniciar(managerUsuarios, managerValoraciones);
         }
+    }
+
+    public void iniciar(ManagerUsuarios managerUsuarios) {
     }
 }

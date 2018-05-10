@@ -3,7 +3,7 @@ package com.company.Manager;
 import com.company.Model.Chiste;
 
 
-public class ManagerChiste {
+public class ManagerChistes {
     Chiste[] chistes = new Chiste[10];
 
     public void crearChiste(String title, String nuevoChiste){

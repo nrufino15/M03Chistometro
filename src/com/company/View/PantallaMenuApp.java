@@ -1,14 +1,14 @@
 package com.company.View;
 
-import com.company.Manager.ManagerChiste;
+import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
-import com.company.Manager.ManagerValoracion;
+import com.company.Manager.ManagerValoraciones;
 
 import java.util.Scanner;
 
 public class PantallaMenuApp {
 
-    public void mostrar(ManagerUsuarios managerUsuarios, ManagerValoracion managerValoracion) {
+    public void mostrar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
@@ -30,7 +30,7 @@ public class PantallaMenuApp {
 
         } else if ("c".equals(opcion)|| "C".equals(opcion)) {
             PantallaRanking pantallaRanking = new PantallaRanking();
-            pantallaRanking.iniciar(managerValoracion);
+            pantallaRanking.iniciar(managerValoraciones);
 
         } else if ("d".equals(opcion)|| "D".equals(opcion)) {
             PantallaPremios pantallaPremios = new PantallaPremios();
@@ -39,9 +39,12 @@ public class PantallaMenuApp {
         }else{
             System.out.println("Error opcion no valida");
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-            pantallaMenuApp.mostrar(managerUsuarios, managerValoracion);
+            pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones);
 
         }
 
+    }
+
+    public void mostrar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes) {
     }
 }
