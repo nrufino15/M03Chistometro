@@ -24,6 +24,6 @@ public class PantallaRegistro {
         managerUsuarios.crearUsuario(usuario, contraseña);
 
         PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-        pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones);
+        pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
     }
 }

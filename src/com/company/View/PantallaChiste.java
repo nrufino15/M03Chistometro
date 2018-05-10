@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class PantallaChiste {
     public void iniciar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes, ManagerValoraciones managerValoraciones){
         System.out.println("---------------------------");
-        System.out.printf("hola");
+        System.out.printf("Chistometro :: Chistes");
+        
     }
 }

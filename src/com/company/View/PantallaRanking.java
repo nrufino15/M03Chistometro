@@ -16,6 +16,6 @@ public class PantallaRanking {
         );
 
         PantallaPremios pantallaPremios = new PantallaPremios();
-        pantallaPremios.iniciar();
+        pantallaPremios.iniciar(managerChistes, managerValoraciones, managerUsuarios);
     }
 }

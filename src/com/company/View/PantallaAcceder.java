@@ -19,10 +19,10 @@ public class PantallaAcceder {
         boolean verificar = managerUsuarios.verificar(username, password);
         if(verificar){
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-            pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones);
+            pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
         }else{
             PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-            pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones);
+            pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
         }
     }
 }

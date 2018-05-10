@@ -16,6 +16,6 @@ public class  Main {
 
 
         PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-        pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones);
+        pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
     }
 }

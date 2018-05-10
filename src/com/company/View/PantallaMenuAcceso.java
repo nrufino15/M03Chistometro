@@ -19,13 +19,10 @@ public class PantallaMenuAcceso {
 
         if("a".equals(opcion) || "A".equals(opcion)){
             PantallaRegistro pantallaRegistro = new PantallaRegistro();
-            pantallaRegistro.iniciar(managerUsuarios, managerValoraciones);
+            pantallaRegistro.iniciar(managerUsuarios, managerValoraciones, managerChistes);
         } else if("b".equals(opcion) || "B".equals(opcion)){
             PantallaAcceder pantallaAcceder = new PantallaAcceder();
-            pantallaAcceder.iniciar(managerUsuarios, managerValoraciones);
+            pantallaAcceder.iniciar(managerUsuarios, managerValoraciones, managerChistes);
         }
-    }
-
-    public void iniciar(ManagerUsuarios managerUsuarios) {
     }
 }

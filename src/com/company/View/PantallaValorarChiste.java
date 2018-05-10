@@ -16,17 +16,17 @@ public class PantallaValorarChiste {
         System.out.println("Valoracion:");
 
         System.out.println("Otro Chiste?");
-        String si = scanner.nextLine();
+        String option = scanner.nextLine();
 
 
 
-        if ("si".equals(si) ) {
+        if ("si".equals(option) || "Si".equals(option)) {
              PantallaChiste pantallaChiste = new PantallaChiste();
-             pantallaChiste.iniciar(managerChistes);
+             pantallaChiste.iniciar(managerUsuarios, managerChistes, managerValoraciones);
 
-        }else if ("No"!=(si)){
+        }else if ("no".equals(option) || "No".equals(option)){
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-            pantallaMenuApp.mostrar(managerValoraciones);
+            pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
         }
     }
 }

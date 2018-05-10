@@ -22,24 +22,24 @@ public class PantallaMenuApp {
         String opcion = scanner.nextLine();
         if ("a".equals(opcion) || "A".equals(opcion) ) {
             PantallaChiste pantallaChiste = new PantallaChiste();
-            pantallaChiste.iniciar(managerUsuarios);
+            pantallaChiste.iniciar(managerUsuarios, managerChistes, managerValoraciones);
 
         } else if ("b".equals(opcion)|| "B".equals(opcion)) {
             PantallaValorarChiste pantallaValorarChiste = new PantallaValorarChiste();
-            pantallaValorarChiste.mostrar();
+            pantallaValorarChiste.mostrar(managerChistes, managerUsuarios, managerValoraciones);
 
         } else if ("c".equals(opcion)|| "C".equals(opcion)) {
             PantallaRanking pantallaRanking = new PantallaRanking();
-            pantallaRanking.iniciar(managerValoraciones);
+            pantallaRanking.iniciar(managerValoraciones, managerUsuarios, managerChistes);
 
         } else if ("d".equals(opcion)|| "D".equals(opcion)) {
             PantallaPremios pantallaPremios = new PantallaPremios();
-            pantallaPremios.iniciar();
+            pantallaPremios.iniciar(managerChistes, managerValoraciones, managerUsuarios);
 
         }else{
             System.out.println("Error opcion no valida");
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-            pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones);
+            pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
 
         }
 
