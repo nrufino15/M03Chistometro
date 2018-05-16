@@ -12,7 +12,7 @@ public class PantallaMenuApp {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------------------------");
-        System.out.println("Chistometro");
+        System.out.println("Chistometro :: Menu");
         System.out.println();
         System.out.println("1) Añadir Chiste ");
         System.out.println("2) Ver y valorar chiste ");
@@ -39,18 +39,17 @@ public class PantallaMenuApp {
             pantallaPremios.iniciar(managerChistes, managerValoraciones, managerUsuarios);
 
         } else if ("5".equals(option)) {
-            PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-            pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+            PantallaInicio pantallaInicio = new PantallaInicio();
+            pantallaInicio.iniciar(managerUsuarios, managerValoraciones, managerChistes);
 
         } else if ("6".equals(option)) {
             System.out.println("-------------------------");
             System.out.println("Hasta luego Lucas");
-            return;
         } else{
             System.out.println("Error opcion no valida");
+            Thread.sleep(2000);
             PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
             pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
-
         }
 
     }

@@ -32,8 +32,8 @@ public class PantallaRegistro {
                 esValido = false;
             } else {
                 managerUsuarios.crearUsuario(firstname, lastname, usuario, password);
-                PantallaMenuAcceso pantallaMenuAcceso = new PantallaMenuAcceso();
-                pantallaMenuAcceso.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+                PantallaInicio pantallaInicio = new PantallaInicio();
+                pantallaInicio.iniciar(managerUsuarios, managerValoraciones, managerChistes);
                 esValido = true;
             }
         }
