@@ -13,26 +13,12 @@ public class PantallaRegistro {
         while (!esValido) {
             System.out.println("---------------------------");
             Scanner scanner = new Scanner(System.in);
+
             System.out.println("MyApp :: Registro");
             System.out.print("Nombre: ");
             String firstname = scanner.nextLine();
             System.out.print("Apellido: ");
             String lastname = scanner.nextLine();
-
-            boolean nombreValido = false;
-            char[] isNumeric = "012346789".toCharArray();
-
-
-            while (!nombreValido) {
-
-//                for (int i = 0; i <firstname.length() ; i++) {
-//                    if (firstname.charAt(i) = isNumeric) {
-//                        nombreValido = true;
-//                    } else {
-//                        nombreValido = false;
-//                    }
-//                }
-            }
 
             System.out.print("Usuario: ");
             String usuario = scanner.nextLine();
