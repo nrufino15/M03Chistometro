@@ -13,6 +13,7 @@ public class  Main {
         ManagerValoraciones managerValoraciones = new ManagerValoraciones();
 
         ManagerChistes managerChistes = new ManagerChistes();
+        managerUsuarios.crearUsuario("a","a");
 
 
         PantallaInicio pantallaInicio = new PantallaInicio();
