@@ -19,7 +19,7 @@ public class ManagerChistes {
     }
 
     public void chistesIniciales() {
-        crearChiste("Ariel", "Porque el mar tiene espuma? Porque la sirenita se llama ARIEL");
+        crearChiste("Ariel", "¿Porque el mar tiene espuma? Porque la sirenita se llama ARIEL");
         crearChiste("Papa Nole","¿Qué coche usa Papá Noel? Un renol");
         crearChiste("Espejo en chino", "¿Cómo se dice 'espejo' en chino? Aitoiyo");
         crearChiste("El abulo y Windows", "Abuelo, ¿por qué estás delante del ordenador con los ojos cerrados? Es que Windows me ha dicho que cierre las pestañas");

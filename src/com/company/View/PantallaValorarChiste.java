@@ -28,7 +28,7 @@ public class PantallaValorarChiste {
 
 
 
-                if ("no".equals(option) || "No".equals(option)){
+                if ("no".equals(option) || "No".equals(option) || "n".equals(option) || "N".equals(option)){
                     PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
                     pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
                 }else{
