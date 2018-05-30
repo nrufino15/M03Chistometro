@@ -2,19 +2,20 @@ package com.company.View;
 
 import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
-import com.company.Manager.ManagerValoraciones;
 
 import java.util.Scanner;
 
 public class PantallaRegistro {
-    public void iniciar(ManagerUsuarios managerUsuarios, ManagerValoraciones managerValoraciones, ManagerChistes managerChistes) throws InterruptedException {
-        boolean esValido = false;
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes) {
+        Scanner scanner = new Scanner(System.in);
 
+        boolean esValido = false;
         while (!esValido) {
             System.out.println("---------------------------");
-            Scanner scanner = new Scanner(System.in);
+
 
             System.out.println("MyApp :: Registro");
+            System.out.println();
             System.out.print("Nombre: ");
             String firstname = scanner.nextLine();
             System.out.print("Apellido: ");
@@ -33,7 +34,7 @@ public class PantallaRegistro {
             } else {
                 managerUsuarios.crearUsuario(firstname, lastname, usuario, password);
                 PantallaInicio pantallaInicio = new PantallaInicio();
-                pantallaInicio.iniciar(managerUsuarios, managerValoraciones, managerChistes);
+                pantallaInicio.iniciar(managerUsuarios, managerChistes);
                 esValido = true;
             }
         }

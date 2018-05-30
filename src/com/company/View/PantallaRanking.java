@@ -2,10 +2,9 @@ package com.company.View;
 
 import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
-import com.company.Manager.ManagerValoraciones;
 
 public class PantallaRanking {
-    public void iniciar(ManagerValoraciones managerValoraciones, ManagerUsuarios managerUsuarios, ManagerChistes managerChistes){
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes){
 
 
 
@@ -16,6 +15,6 @@ public class PantallaRanking {
         );
 
         PantallaPremios pantallaPremios = new PantallaPremios();
-        pantallaPremios.iniciar(managerChistes, managerValoraciones, managerUsuarios);
+        pantallaPremios.iniciar(managerChistes, managerUsuarios);
     }
 }

@@ -15,8 +15,17 @@ public class ManagerChistes {
                 break;
             }
         }
-
     }
+
+    public void valorarChiste(int opcion, int valor) {
+        for (int i = 0; i < chistes.length; i++) {
+            if (chistes[i].valor == (opcion - 1) && chistes[i] == null) {
+                chistes[i].valor = valor;
+                break;
+            }
+        }
+    }
+
 
     public void chistesIniciales() {
         crearChiste("Ariel", "¿Porque el mar tiene espuma? Porque la sirenita se llama ARIEL");

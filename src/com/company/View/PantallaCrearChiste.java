@@ -2,12 +2,11 @@ package com.company.View;
 
 import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
-import com.company.Manager.ManagerValoraciones;
 
 import java.util.Scanner;
 
 public class PantallaCrearChiste {
-    public void iniciar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes, ManagerValoraciones managerValoraciones) throws InterruptedException {
+    public void iniciar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes) {
         boolean esValido = false;
 
         while (!esValido) {
@@ -15,6 +14,7 @@ public class PantallaCrearChiste {
 
             System.out.println("---------------------------");
             System.out.println("Chistometro :: Crear chiste");
+            System.out.println();
             System.out.print("Titulo: ");
             String title = scanner.nextLine();
             System.out.print("Cuerpo: ");
@@ -33,10 +33,11 @@ public class PantallaCrearChiste {
                 esValido = false;
             } else {
                 System.out.println("Chiste creado");
-                Thread.sleep(2000);
                 managerChistes.crearChiste(title, body);
                 PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
-                pantallaMenuApp.mostrar(managerUsuarios, managerValoraciones, managerChistes);
+                pantallaMenuApp.mostrar(managerUsuarios, managerChistes);
+                System.out.println("Pulsa cualquier tecla para continuar");
+                String next = scanner.nextLine();
                 esValido = true;
             }
         }
