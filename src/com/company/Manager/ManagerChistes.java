@@ -18,12 +18,7 @@ public class ManagerChistes {
     }
 
     public void valorarChiste(int opcion, int valor) {
-        for (int i = 0; i < chistes.length; i++) {
-            if (chistes[i].valor == (opcion - 1) && chistes[i] == null) {
-                chistes[i].valor = valor;
-                break;
-            }
-        }
+        chistes[opcion - 1].valor = valor;
     }
 
 
