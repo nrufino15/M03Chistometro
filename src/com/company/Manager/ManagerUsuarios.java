@@ -21,13 +21,21 @@ public class ManagerUsuarios {
         }
     }
 
-    public boolean verificar(String nombre, String pass){
+    public boolean verificar(String username, String pass){
         for (int i = 0; i < usuarios.length; i++) {
-            if(usuarios[i] != null && usuarios[i].nickname.equals(nombre) && usuarios[i].password.equals(pass)){
+            if(usuarios[i] != null && usuarios[i].nickname.equals(username) && usuarios[i].password.equals(pass)){
                 return true;
             }
         }
+        return false;
+    }
 
+    public boolean verificarRegistro(String username){
+        for (int i = 0; i < usuarios.length; i++) {
+            if(usuarios[i] != null && usuarios[i].nickname.equals(username)){
+                return true;
+            }
+        }
         return false;
     }
 }

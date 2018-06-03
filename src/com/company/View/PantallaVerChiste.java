@@ -2,27 +2,29 @@ package com.company.View;
 
 import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
+import com.company.View.widgets.Mensajes;
 
 
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class PantallaVerChiste {
     public void mostrar (ManagerUsuarios managerUsuarios, ManagerChistes managerChistes) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("---------------------------");
-        System.out.println("Chistometro :: Ver Chiste");
-        System.out.println();
+        Mensajes.mostrarTitol("Chistometro :: Ver chiste");
         for (int i = 0; i < managerChistes.chistes.length; i++) {
             if (managerChistes.chistes[i] != null){
-                System.out.println("---------------------------");
+                Mensajes.mostrarOk("--------------------------------------------------------");
+                System.out.println();
                 System.out.println("Numero chiste:" + (i+1));
                 System.out.println("Titulo: " + managerChistes.chistes[i].titulo);
                 System.out.println("Cuerpo: " + managerChistes.chistes[i].cuerpo);
-                System.out.println("Valoracion: " + managerChistes.chistes[i].valor);
+                System.out.println("Valoracion: " + managerChistes.chistes[i].valoracion[i]);
+                System.out.println();
             }
         }
-        System.out.println("---------------------------");
+        Mensajes.mostrarOk("--------------------------------------------------------");
 
         boolean esValido = false;
 
@@ -41,15 +43,33 @@ public class PantallaVerChiste {
                 pantallaMenuApp.mostrar(managerUsuarios, managerChistes);
                 esValido = true;
             } else if ("3".equals(option)) {
-                PantallaInicio pantallaInicio = new PantallaInicio();
-                pantallaInicio.iniciar(managerUsuarios, managerChistes);
-                esValido = true;
+                boolean confirmar = false;
+                while (!confirmar) {
+                    Mensajes.mostrarError("¿Seguro que quiere cerrar sesion?");
+                    String opcion = scanner.nextLine();
+                    if (opcion.equals("N") || opcion.equals("n") || opcion.equals("No") || opcion.equals("NO") || opcion.equals("no")) {
+                        PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
+                        pantallaMenuApp.mostrar(managerUsuarios, managerChistes);
+                        confirmar = true;
+                    } else if (opcion.equals("S") || opcion.equals("s") || opcion.equals("Si") || opcion.equals("SI")  || opcion.equals("si")) {
+                        Mensajes.mostrarInfo("Sesion cerrada, pulsa Enter para continuar");
+                        PantallaInicio pantallaInicio = new PantallaInicio();
+                        String next = scanner.nextLine();
+                        pantallaInicio.iniciar(managerUsuarios, managerChistes);
+                        confirmar = true;
+                    } else {
+                        Mensajes.mostrarError("Debe escribir <<N/n/No/NO/no>> para cancelar o <<S/s/Si/SI/si>> para confirmar");
+                        confirmar = false;
+                    }
+                    esValido = true;
+                }
             } else if ("4".equals(option)) {
-                System.out.println("Hasta luego");
+                Mensajes.mostrarInfo("Hasta luego");
                 esValido = true;
             } else{
-                System.out.println("Error opcion no valida");
-                System.out.print("Pulsa una tecla para continuar");
+                Mensajes.mostrarError("Error opcion no valida");
+                System.out.println();
+                Mensajes.mostrarInfo("Pulsa Enter para continuar");
                 String next = scanner.nextLine();
                 esValido = false;
             }

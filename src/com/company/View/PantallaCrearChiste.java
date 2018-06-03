@@ -2,6 +2,7 @@ package com.company.View;
 
 import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
+import com.company.View.widgets.Mensajes;
 
 import java.util.Scanner;
 
@@ -12,9 +13,7 @@ public class PantallaCrearChiste {
         while (!esValido) {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("---------------------------");
-            System.out.println("Chistometro :: Crear chiste");
-            System.out.println();
+            Mensajes.mostrarTitol("Chistometro :: Crear chiste");
             System.out.print("Titulo: ");
             String title = scanner.nextLine();
             System.out.print("Cuerpo: ");
@@ -32,12 +31,12 @@ public class PantallaCrearChiste {
                 System.out.println("No se puede repetir los chistes");
                 esValido = false;
             } else {
-                System.out.println("Chiste creado");
                 managerChistes.crearChiste(title, body);
+                Mensajes.mostrarOk("Chiste creado");
+                Mensajes.mostrarInfo("Pulsa Enter para continuar");
+                String next = scanner.nextLine();
                 PantallaMenuApp pantallaMenuApp = new PantallaMenuApp();
                 pantallaMenuApp.mostrar(managerUsuarios, managerChistes);
-                System.out.println("Pulsa cualquier tecla para continuar");
-                String next = scanner.nextLine();
                 esValido = true;
             }
         }

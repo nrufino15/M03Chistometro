@@ -2,6 +2,7 @@ package com.company.View;
 
 import com.company.Manager.ManagerChistes;
 import com.company.Manager.ManagerUsuarios;
+import com.company.View.widgets.Mensajes;
 
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;
@@ -9,17 +10,14 @@ import java.util.Scanner;
 public class PantallaInicio {
 
     public void iniciar(ManagerUsuarios managerUsuarios, ManagerChistes managerChistes) {
-
+        Scanner scanner = new Scanner(System.in);
         boolean esValido = false;
 
         while(!esValido) {
-            System.out.println("---------------------------");
-            System.out.println("MyApp :: Inicio");
-            System.out.println();
+            Mensajes.mostrarTitol("MyApp :: Inicio");
             System.out.println("1) Registrarse");
             System.out.println("2) Acceder");
             System.out.println("3) Salir");
-            Scanner scanner = new Scanner(System.in);
             String opcion = scanner.nextLine();
 
 
@@ -35,8 +33,9 @@ public class PantallaInicio {
                 System.out.println("Hasta luego");
                 esValido = true;
             } else {
-                System.out.println("Debes elegir la opcion correcta, solo números");
-                System.out.println("Pulsa cualquier tecla para continuar");
+                Mensajes.mostrarError("Debes elegir la opcion correcta, solo números");
+                System.out.println();
+                Mensajes.mostrarInfo("Pulsa Enter para continuar");
                 String next = scanner.nextLine();
                 esValido = false;
             }
