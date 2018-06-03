@@ -26,6 +26,20 @@ public class ManagerChistes {
         }
     }
 
+    public int mediaValoracion() {
+        int cuenta = 0;
+        int media = 0;
+        for (int i = 0; i <chistes.length ; i++) {
+            for (int j = 0; j <chistes[i].valoracion[j] ; j++) {
+                cuenta++;
+                if (chistes[i].valoracion[i] != 0) {
+                    media = (media + chistes[i].valoracion[j])/cuenta;
+                }
+            }
+        }
+        return media;
+    }
+
 
     public void chistesIniciales() {
         crearChiste("Ariel", "¿Porque el mar tiene espuma? Porque la sirenita se llama ARIEL");
